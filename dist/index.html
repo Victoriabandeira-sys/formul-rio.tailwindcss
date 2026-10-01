@@ -44,25 +44,64 @@
                         <label for="nome" class=" block ml-2 text-sm mb-2 text-slate-300">Nome completo</label>
                         <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required minlength="10" maxlength="30" class="border border-white/10 bg-slate-900/60 px-2 py-3 w-full rounded-lg outline-none focus:border-cyan-400 focus:bg-white/10">
                     </div>
+
                     <div>
-                        <label for="cogigo" class=" block ml-2 text-sm mb-2 text-slate-300">Código de acesso</label>
-                        <input type="text" id="cogigo" name="cogigo" placeholder="Digite código" required minlength="10" maxlength="30"
-                            class="border border-white/10 bg-slate-900/60 px-2 py-3 w-full rounded-lg outline-none focus:border-cyan-400 focus:bg-white/10">
-                    </div>
-                    <div>
-                        <label for="data" class=" block ml-2 text-sm mb-2 text-slate-300">Data da viajem</label>
-                        <input type="text" id="data" name="data" placeholder="dd/mm/aaaa" required minlength="10" maxlength="30"
-                            class="border border-white/10 bg-slate-900/60 px-2 py-3 w-full rounded-lg outline-none focus:border-cyan-400 focus:bg-white/10">
-                    </div>
-                    <div>
-                        <label for="email" class=" block ml-2 text-sm mb-2 text-slate-300">Digite seu e-mail</label>
-                        <input type="text" id="email" name="email" placeholder="Digite seu e-mail" required minlength="10" maxlength="30"
+                        <label for="codigo" class=" block ml-2 text-sm mb-2 text-slate-300">Código de acesso</label>
+                        <input type="password" id="codigo" name="codigo" placeholder="Digite código" required minlength="10" maxlength="30"
                             class="border border-white/10 bg-slate-900/60 px-2 py-3 w-full rounded-lg outline-none focus:border-cyan-400 focus:bg-white/10">
                     </div>
 
+                    <div>
+                        <label for="dataViagem" class=" block ml-2 text-sm mb-2 text-slate-300">Data da viajem</label>
+                        <input type="date" id="dataViagem" name="dataViagem" 
+                            class="border border-white/10 bg-slate-900/60 px-2 py-3 w-full rounded-lg outline-none focus:border-cyan-400 focus:bg-white/10">
+                    </div>
+
+                    <div>
+                        <label for="email" class=" block ml-2 text-sm mb-2 text-slate-300">Digite seu e-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required maxlength="50"
+                            class="border border-white/10 bg-slate-900/60 px-2 py-3 w-full rounded-lg outline-none focus:border-cyan-400 focus:bg-white/10">
+                    </div>
 
                 </section>
             </fieldset>
+
+
+            <fieldset class="border border-white/10 rounded-2xl bg-white/10 p-4">
+                <legend class="font-title text-lg font-bold  text-cyan-300 px-2">02. Detalhes da viagem</legend>
+
+                <section class="grid gap-6 md:grid-cols-2">
+
+                    <div>
+                        <label for="destino" class=" block ml-2 text-sm mb-2 text-slate-300">Destino</label>
+
+                        <select name="destino" id="destino" required class="border border-white/10 bg-slate-900 px-2 py-3 w-full rounded-lg outline-none focus:border-cyan-400">
+                            <option value="" disabled selected>Selecione um destino</option>
+                            <option value="Lua">Lua</option>
+                            <option value="Marte">Marte</option>
+                            <option value="Titan">Titan</option>
+                            <option value="Europa">Europa</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="nave" class="block ml-2 text-sm mb-2 text-slate-300"> Nave Preferida</label>
+
+                        <input type="text" name="nave" id="nave" list="listaNav" required class="border border-white/10 bg-slate-900/60 px-2 py-3 w-full rounded-lg outline-none focus:border-cyan-400 focus:bg-white/10" placeholder="Escolha ou digite uma nave">
+
+                        <datalist id="listaNav">
+                            <option value="Orion GX"></option>
+                            <option value="Galaxy Explorer"></option>
+                            <option value="Star Voyager"></option>
+                            <option value="Cosmos 3000"></option>
+                            <option value="Zenith 800"></option>
+                            <option value="Open Space"></option>
+                        </datalist>
+
+                    </div>
+                </section>
+            </fieldset>
+            <!-- 2 secão de dados -->
         </form>
     </main>
 </body>
